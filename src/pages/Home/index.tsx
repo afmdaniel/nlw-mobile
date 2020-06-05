@@ -1,12 +1,16 @@
 import React from 'react'
-import { View, StyleSheet } from 'react-native'
+import { View, Image, StyleSheet } from 'react-native'
+
+const logo = require('../../assets/logo.png')
 
 const Home = () => {
-  return <View style={styles.container}/>
+  return (
+    <View style={styles.container}>
+      <Image source={logo} />
+    </View>)
 }
 
 export default Home
-
 
 const styles = StyleSheet.create({
   container: {
