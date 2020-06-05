@@ -1,8 +1,21 @@
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
+
+const Points = () => {
+  return (
+    <View>
+      <Text>Hello, World!</Text>
+    </View>
+  )
+}
+
+export default Points
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 32,
-    paddingTop: 20 + Constants.statusBarHeight,
+    paddingTop: 20 // + Constants.statusBarHeight,
   },
 
   title: {
