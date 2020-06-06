@@ -47,7 +47,7 @@ const Points = () => {
     }
 
     loadPosition()
-  },  [])
+  }, [])
 
   useEffect(() => {
     api.get('items').then(reponse => {
@@ -71,8 +71,8 @@ const Points = () => {
     navigation.goBack()
   }
   
-  function handleNavigateToDetail() {
-    navigation.navigate('Detail')
+  function handleNavigateToDetail(id: number) {
+    navigation.navigate('Detail', { point_id: id })
   }
 
   function handleSelectItem(id: number) {
@@ -110,7 +110,7 @@ const Points = () => {
                 <Marker
                 key={String(point.id)}
                 style={styles.mapMarker}
-                onPress={handleNavigateToDetail}
+                onPress={() => handleNavigateToDetail(point.id)}
                 coordinate={{
                   latitude: point.latitude,
                   longitude: point.longitude,
