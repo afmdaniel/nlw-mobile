@@ -40,7 +40,7 @@ const Points = () => {
         return
       }
       
-      const location = await Location.getCurrentPositionAsync()
+      const location = await Location.getCurrentPositionAsync({ enableHighAccuracy: true })
 
       const { latitude, longitude } = location.coords
       setInitialPosition([latitude, longitude])
